@@ -11,16 +11,15 @@ and open the template in the editor.
 <head>
 <style>
 .thumbnail {
-background-image: url("images/wood4.jpg");
 padding: 10px 10px 10px 10px;
 }</style></head>
 
-<body style="background-image: url(images/wood8.jpg); background-size: cover;">
+<body>
 
 <br><br>
 <div class="thumbnail">
 <div style="text-align:center">
-<img src="images/signup.png" alt="Logosmall" width="400px">
+<h1>Sign Up</h1>
 
 </div>
 
@@ -41,19 +40,19 @@ padding: 10px 10px 10px 10px;
 
 <tr>
 <td><form:label path="firstname">FIRSTNAME</form:label></td>
-<td><form:input path="firstname" id = "_ifirstname" /></td>
+<td><form:input path="firstname" id = "_ifirstname" pattern="[a-zA-Z]{3,15}" /></td>
 <td><form:errors path="firstname" style="color:red"/></td>
 </tr>
 
 <tr>
 <td><form:label path="lastname">LASTNAME</form:label></td>
-<td><form:input path="lastname" id = "_ilastname" /></td>
+<td><form:input path="lastname" id = "_ilastname" pattern="[a-zA-Z]{3,15}" /></td>
 <td><form:errors path="lastname" style="color:red"/></td>
 </tr>
 
 <tr>
 <td><form:label path="middlename">MIDDLENAME</form:label></td>
-<td><form:input path="middlename" id = "_imiddlename" /></td>
+<td><form:input path="middlename" id = "_imiddlename" pattern="[a-zA-Z]{3,15}" /></td>
 <td><form:errors path="middlename" style="color:red"/></td>
 </tr>
 

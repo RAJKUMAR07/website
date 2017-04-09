@@ -23,7 +23,7 @@ function validateform(){
 
 </script>
 
-<body style="background-image: url(images/wood16.jpg); background-size: cover;">
+<body>
   
 <div style="text-align:center">
 <font color = "red"> ${msg} </font>
@@ -45,7 +45,7 @@ Your login attempt was not successful due to <br/><br/>
   <div class="col-sm-4"></div>
   <div class="col-sm-4">
  
-<img src="images/login.png" alt="Logosmall" width="400px"><br>
+<h1>Login</h1><br>
     <div class="form-group">
       <label class="control-label" for="user">Username:</label>
              <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username" required>

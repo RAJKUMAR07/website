@@ -12,12 +12,7 @@ import com.niit.controllers.BasicController;
 import com.portal.daos.ClientDAOImpl;
 import com.portal.models.Client;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-/**
- * TO DO
- * 1. Check if the username is already present. 
- * @author irzaai
- *
- */
+
 
 @Component
 public class SignupFormValidator implements Validator {
@@ -62,7 +57,7 @@ public class SignupFormValidator implements Validator {
 		  Pattern notNumber = Pattern.compile("[^0-9]");
 		  
 		  if(notAlphaNumeric.matcher(uname).find() || uname.length()<3 || uname.length()>15) errors.rejectValue("uname", "uname.incorrect","Username should be Alpha Numeric and 3-15 characters.");		
-		  if((!AlphaNumeric.matcher(firstname).find()) || firstname.length()<3 || firstname.length()>15) errors.rejectValue("firstname", "firstname.incorrect","firstname should be Alpha Numeric and 3-15 characters.");
+		  if((!AlphaNumeric.matcher(firstname).find()) || firstname.length()<3 || firstname.length()>15 || firstname.matches( "[0-9]*" )) errors.rejectValue("firstname", "firstname.incorrect","firstname should be Alpha Numeric and 3-15 characters.");
 		  if((!AlphaNumeric.matcher(lastname).find()) || lastname.length()<3 || lastname.length()>15) errors.rejectValue("lastname", "lastname.incorrect","lastname should be Alpha Numeric and 3-15 characters.");
 		  if(middlename.length()>0){
 		  if((!AlphaNumeric.matcher(middlename).find())|| middlename.length()<3 || middlename.length()>15) errors.rejectValue("middlename", "middlename.incorrect","middlename should be Alpha Numeric and 3-15 characters.");

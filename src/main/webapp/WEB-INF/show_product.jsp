@@ -4,10 +4,12 @@
 <!DOCTYPE html>
 <html>
 <body>
+<br>
 <div class="container">
 <div class="row">
 <div class="col-sm-4">
 <img class = img-responsive src = "images\products\<c:out value="${product.id}" />.jpg" alt = "${product.name}">
+<br>
 <table class = "table">
 <tbody>
 <tr>

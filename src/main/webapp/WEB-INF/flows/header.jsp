@@ -14,7 +14,48 @@
 <script type="text/javascript" src="/Ecommerce/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Start of style, These classes are for the carousel buttons -->
-<style>   
+<style> 
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #ffffff !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#654321 !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #654321 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: brown !important;
+}   
 #carouselButtons {
 margin-left: 100px;
 position: absolute;
@@ -91,13 +132,13 @@ color: black;
 }
 
 .jumbotron {
-background-image: url("images/Wood.jpg");
+background-image: url("images/g.jpg");
 margin-bottom:0;
 }
 
 .navbar {
     margin-bottom: 0;
-	background-image: url("images/Wood2.jpg");
+	background-color: black; 
     border: 0;
     opacity:0.9;
 	padding: 20px,20px;
@@ -113,7 +154,7 @@ margin-bottom:0;
 
 <!-- This is the title message in the body that is to be displayed in all pages -->
 <div class="jumbotron text-center">
-<center><a href="/Ecommerce/all_landing"><img src="images/logo.png" class="img-responsive"></a></center><br>
+<h1>Music World 2k16</h1>
 <p>Hey ${modelbind.model.currentUser}!
 </p> 
 <p color = "blue">${msg}</p>

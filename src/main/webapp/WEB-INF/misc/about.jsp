@@ -12,31 +12,35 @@
 
 <div class="container">
 <div class="row">
+<br><br>
 <div class="col-sm-4">
-<p> Our company had been in the busines for a long time.<br/>
-Detail 1, <br/>
-Detail 2,<br/>
-Detail 3,<br/>
-Detail 4,<br/>
-Detail 5,<br/>
-More Details,<br/>
-More Details<br/>
-contact@ABC.in,<br/>
-123-456-789<br/>
+<p> Thrift Shop has been created with cash savings in mind. <br/>
+<br>
+Developed by Nikh <br/>
+For the money savers!<br/>
+Blah Blah Blah!<br/>
+Blah Blah Blah!<br/>
+Blah Blah Blah!<br/>
+Blah Blah Blah!<br/>
+<br>
+For more details contact:<br/>
+thriftshop@gmail.com,<br/>
+9876543210<br/>
 </p>
 
 <p> For any suggestions and contact.<br/>
-suggestions@ABC.in,<br/>
-000-456-789<br/>
+thriftshop@gmail.com,<br/>
+9876543210<br/>
 </p>
 
 
 </div>
 
 <div>
-<img src = "images\misc\company.jpg">
+<img src = "images\ts.jpg">
 </div>
 </div>
+<br><br>
 </div>
      
       

@@ -6,7 +6,7 @@
 
 <!-- Head tag stores the title and the relevant libraries that are needed.-->
 <head>
-<title>Welcome to Thrift Shop!</title>
+<title>Welcome to Music Shop!</title>
    
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <link  rel="stylesheet" type = "text/css" href="/Ecommerce/bootstrap/css/bootstrap.min.css" >
@@ -34,23 +34,66 @@ myApp.controller('MyController',function($scope, $http) {
 });
 </script>
 
-<style>   
+<style>  
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand { 
+    color: #ffffff !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#654321 !important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #654321 !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    background-color: brown !important;
+} 
 .horizontal {
     display: flex;
     justify-content: center;
 }
 
 .jumbotron {
-background-image: url("images/Wood.jpg");
+background-image: url("images/g.jpg");
 margin-bottom:0;
 }
 
 .navbar {
     margin-bottom: 0;
-	background-image: url("images/Wood2.jpg");
+	background-color: black;
     border: 0;
     opacity:0.9;
 	padding: 20px,20px;
+	position:relative; z-index:1;
 }
 #carouselButtons {
 margin-left: 100px;
@@ -134,7 +177,7 @@ color: black;
 
 <!-- This is the title message in the body that is to be displayed in all pages -->
 <div class="jumbotron text-center">
-<center><a href="/Ecommerce/all_landing"><img src="images/logo.png" class="img-responsive"></a></center><br>
+<h1>Music World 2k16</h1>
 <p>Hey ${currentUser}!
 </p> 
 <p color = "blue">${msg}</p>
@@ -142,7 +185,7 @@ color: black;
 
 
 <!-- This is the Navigation bar-->
-<nav class = "navbar navbar-default" role = "navigation">
+<nav class = "navbar navbar-inverse" role = "navigation">
 
 <!-- Navigation bar header -->
 <div class = "navbar-header">
@@ -226,6 +269,7 @@ data-toggle = "collapse" data-target = "#example-navbar-collapse">
 </c:if>
 <c:if test="${currentUser != 'Guest'}">
 <a class = "navbar-brand pull-right" href = "/Ecommerce/j_spring_security_logout">Logout</a>
+<a class = "navbar-brand pull-right" href = "/Ecommerce/user_add_cart?productId=${0}">My Cart</a>
 </c:if>
 <c:if test="${isAdmin == true}">
 <a class = "navbar-brand pull-right" href = "/Ecommerce/admin_add_supplier">Admin</a>
@@ -237,11 +281,11 @@ data-toggle = "collapse" data-target = "#example-navbar-collapse">
         <table id="searchTextResults" class = "dropdown pull-right">
         <tr><td>
           <button ng-click="getDataFromServer()" class = "dropdown pull-right"> <span class="glyphicon glyphicon-search"></span></button>
-           <label class = "dropdown pull-right">Search: <input ng-model="searchText"></label>
+           <label class = "dropdown pull-right"><p style="color:white;">Search: <input ng-model="searchText" style="color:black;"></p></label>
          </td> 
          </tr> 
            <tr ng-repeat="product in products | filter:{$: searchText}">
-           <td ><a class = "dropdown-toggle" href="/Ecommerce/all_show_product?id={{product.id}}"><p style="color:gray;">{{product.name}}</p></a></td>
+           <td ><a class = "dropdown-toggle" href="/Ecommerce/all_show_product?id={{product.id}}"><p style="color:white;">{{product.name}}</p></a></td>
            </tr>
            </table>
         </div>

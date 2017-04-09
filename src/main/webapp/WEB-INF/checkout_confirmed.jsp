@@ -9,7 +9,7 @@
 <div class="container">
 <div class="row">
 <h2>Thanks for trying out Thrift Shop!
-<br/>You will recieve your product within 7-10 days on COD payment mode!</h2>
+<br/>You will receive your product within 7-10 days on COD payment mode!</h2>
 <hr />
 
 	  <!-- ****************Start of the Table to list**********************-->
